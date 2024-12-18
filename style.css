@@ -6,8 +6,6 @@
   font-style: normal;
 }
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -29,6 +27,10 @@ body {
   border-radius: 10px;
   /* background: #fff; */
   /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+.onboarding2, .onboarding3, .onboarding4 {
+  padding-top: 3rem;
+
 }
 
 .bgImg img {
