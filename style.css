@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "Visby Regular";
+  src: url("./fonts/visby-cdnfonts/VisbyBold.otf") format("woff2"),
+       url("./fonts/Visby-Round-Font/Visby-Round-www.Dfonts.org/Webfont/VisbyRoundCF-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: "Visby Regular", Arial, sans-serif; /* Fallback fonts included */
+  font-style: normal;
+  font-weight: normal;
+}
+
+.onboarding {
+  height: 100%;
+  display: none;
+  text-align: center;
+  padding: 20px;
+  /* border: 1px solid #ddd; */
+  border-radius: 10px;
+  /* background: #fff; */
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+.bgImg img {
+  width: 60%;
+}
+.text h3 {
+  margin-top: 0;
+}
+.onboarding.active {
+  display: block;
+}
+.btn,
+.nextbtn {
+  margin-top: 20px;
+}
+.nextbtn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10rem;
+}
+button {
+  padding: 10px 20px;
+  background-color: #ff7f00;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #ec9742;
+}
+
+h2 {
+  font-size: 3rem;
+}
+.onboarding p {
+  padding: 5rem 0;
+  font-size: 1.3rem;
+}
+.gesture {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding-top: 2rem;
+}
+.gesture img {
+  cursor: pointer;
+}
+.onboarding4 .bgImg img {
+  width: 30%;
+}
+.onboarding4 p {
+  padding: 2rem 0;
+  font-size: 1.3rem;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>onboarding</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="onboarding onboarding1 active">
+      <div class="bgImg">
+        <img src="./images/male.png" alt="male image" />
+      </div>
+      <div class="text">
+        <h3>Let's Find Out Your Learning Style</h3>
+        <div class="btn">
+          <button onclick="nextOnboarding()">Continue to Quiz</button>
+        </div>
+      </div>
+    </div>
+    <div class="onboarding onboarding2">
+      <h2>Auditory Learning Style</h2>
+      <p>Do you prefer attending lectures over reading textbooks?</p>
+      <div class="gesture">
+        <div class="thumbsup">
+          <img src="./images/thumbsup.png" alt="Thumbs Up" />
+        </div>
+        <div class="thumbsdown">
+          <img src="./images/thumbsdown.png" alt="Thumbs Down" />
+        </div>
+      </div>
+      <div class="nextbtn">
+        <button onclick="previousOnboarding()">Previous</button>
+        <button onclick="nextOnboarding()">Next</button>
+      </div>
+    </div>
+    <div class="onboarding onboarding3">
+      <h2>Reading/Writing Learning Style</h2>
+      <p>
+        Do you prefer reading detailed instructions over watching a
+        demonstration?
+      </p>
+      <div class="gesture">
+        <div class="thumbsup">
+          <img src="./images/thumbsup.png" alt="Thumbs Up" />
+        </div>
+        <div class="thumbsdown">
+          <img src="./images/thumbsdown.png" alt="Thumbs Down" />
+        </div>
+      </div>
+      <div class="nextbtn">
+        <button onclick="previousOnboarding()">Previous</button>
+        <button onclick="nextOnboarding()">Next</button>
+      </div>
+    </div>
+    <div class="onboarding onboarding4">
+      <div class="bgImg">
+        <img src="./images/Confetti.png" alt="Confetti" />
+      </div>
+      <div class="text">
+        <h3>Congrats on reaching the end of your quiz!</h3>
+        <p>Your Learning style will be updated on your dashboard</p>
+        <div class="btn">
+          <button>Proceed to Dashboard</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let currentOnboarding = 0;
+      const onboardings = document.querySelectorAll(".onboarding");
+
+      function showOnboarding(index) {
+        onboardings.forEach((section, idx) => {
+          section.classList.toggle("active", idx === index);
+        });
+      }
+
+      function nextOnboarding() {
+        if (currentOnboarding < onboardings.length - 1) {
+          currentOnboarding++;
+          showOnboarding(currentOnboarding);
+        }
+      }
+
+      function previousOnboarding() {
+        if (currentOnboarding > 0) {
+          currentOnboarding--;
+          showOnboarding(currentOnboarding);
+        }
+      }
+    </script>
+  </body>
+</html>
