@@ -1,7 +1,8 @@
 @font-face {
   font-family: "Visby Regular";
   src: url("./fonts/visby-cdnfonts/VisbyBold.otf") format("woff2"),
-       url("./fonts/Visby-Round-Font/Visby-Round-www.Dfonts.org/Webfont/VisbyRoundCF-Bold.woff") format("woff");
+    url("./fonts/Visby-Round-Font/Visby-Round-www.Dfonts.org/Webfont/VisbyRoundCF-Bold.woff")
+      format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -9,7 +10,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 body {
@@ -28,9 +29,13 @@ body {
   /* background: #fff; */
   /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
 }
-.onboarding2, .onboarding3, .onboarding4 {
+.onboarding5 {
   padding-top: 3rem;
-
+}
+.onboarding2,
+.onboarding3,
+.onboarding4 {
+  padding-top: 5rem;
 }
 
 .bgImg img {
@@ -80,10 +85,25 @@ h2 {
 .gesture img {
   cursor: pointer;
 }
-.onboarding4 .bgImg img {
+.onboarding5 .bgImg img {
   width: 30%;
 }
-.onboarding4 p {
+.onboarding5 p {
   padding: 2rem 0;
   font-size: 1.3rem;
+}
+@media (max-width: 768px) {
+  .bgImg img {
+    width: 100%;
+    padding-top: 5rem;
+  }
+  .gesture img {
+    width: 60%;
+  }
+  .nextbtn {
+    padding-top: 4rem;
+  }
+  .onboarding5 .bgImg img {
+    width: 60%;
+}
 }
